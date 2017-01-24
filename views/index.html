@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    
+    <title>The Real Lunch Picker 5000</title>
+    
+    <!-- Bootstrap -->
+    <link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    
+    <!--[if lt IE 9]>
+    <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class = "container">
+      <div class="jumbotron">
+        <h1>Lunch Picker 5000</h1>
+        <!--<p>(We'll probably just end up at Del Taco)</p>-->
+        
+        <div class="alert alert-info" role="alert">
+         <ol>
+           <li>Enter your name (only users with names will be counted).</li>
+           <li>Make your vote. Examples: "Del Taco", "Sandwiches", "Wherever Adam wants to go".</li>
+           <li>Let everyone know when you're ready!</li>
+         </ol>
+       </div>
+       <div>
+         <div id="vis"></div>
+       </div>
+
+        <div class = "progress progress-striped active">
+           <div class = "progress-bar progress-bar-info" role = "progressbar" aria-valuenow = "60" aria-valuemin = "0" aria-valuemax = "100" style = "width: 0%;">
+              <span class = "sr-only">40% Complete</span>
+           </div>
+        </div>
+        <p id="readyText">0/0 Ready</p>
+        
+        <p>
+          <button id="shotgunButton" type="button" class="btn btn-info btn-lg">Call Shotgun!</button>
+          <span id="shotgunUsername"></span>
+        </p>
+
+      </div>
+    </div>
+    
+    <div class = "container">
+      <table class = "table table-striped" id="usersTable">
+        
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Vote</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+        </tbody>
+        
+      </table>
+    </div>
+    
+    <br/>
+    <br/>
+    <br/>
+    
+    <div class="container">
+      <div class="jumbotron">
+        <h5>This silly poop web app was made by Bryan and Drew with <a href="https://gomix.com/#!/project/lunch-picker-5000" target="_blank">Gomix</a>!<p></p></h5>
+      </div>
+    </div>
+    
+<!--     <script src="https://d3js.org/d3.v3.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/fingerprintjs2/1.4.4/fingerprint2.min.js"></script>
+    <script src ="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src ="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="d3.min.js"></script>
+    <script src="cloud.min.js"></script>
+    <script src="cloud.js"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
